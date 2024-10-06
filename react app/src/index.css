@@ -1,0 +1,79 @@
+/* styles.css */
+
+/* Grundlegende Reset-Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body, html {
+    height: 100%;
+    font-family: Arial, sans-serif; /* Schriftart für die gesamte Webseite */
+    line-height: 1.6; /* Zeilenhöhe für bessere Lesbarkeit */
+    background-color: #ffffff; /* Hintergrundfarbe für die Webseite */
+    color: #333333; /* Standardtextfarbe */
+}
+
+/* Header-Stile */
+header {
+    width: 100%;
+    padding: 20px;
+    background-color: #f1f1f1; /* Hintergrundfarbe des Headers */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Schatten für den Header */
+    position: relative;
+    z-index: 1000;
+}
+
+header h1 {
+    margin: 0;
+    text-align: center; /* Titel zentrieren */
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex; /* Flexbox für horizontale Anordnung */
+    justify-content: center; /* Zentriert die Links im Header */
+    margin: 10px 0;
+}
+
+nav li {
+    margin: 0 15px; /* Abstand zwischen den Links */
+}
+
+nav a {
+    text-decoration: none; /* Unterstreichung der Links entfernen */
+    color: #007bff; /* Linkfarbe */
+    transition: color 0.3s; /* Weicher Übergang für Farbänderung */
+}
+
+nav a:hover {
+    color: #0056b3; /* Farbe der Links beim Hover */
+}
+
+/* Footer-Stile */
+footer {
+    padding: 10px;
+    background-color: #f1f1f1; /* Hintergrundfarbe des Footers */
+    text-align: center; /* Footer-Inhalt zentrieren */
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Navigation links untereinander bei kleinen Bildschirmen */
+    }
+
+    nav li {
+        margin: 10px 0; /* Abstand bei vertikaler Anordnung */
+    }
+
+    header {
+        padding: 15px; /* Weniger Padding für mobile Geräte */
+    }
+
+    .editor-container {
+        padding: 20px; /* Weniger Padding für den Code-Editor auf mobilen Geräten */
+    }
+}
