@@ -9,7 +9,7 @@ function Code({ onLanguageChange }) {
 
     // Funktion zum Senden des Codes ans Backend
     const sendCodeToBackend = () => {
-        fetch('http://127.0.0.1:5000/api/save_code', {
+        fetch('https://code-editor-2-3ee8b6e354c0.herokuapp.com/api/save_code', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
