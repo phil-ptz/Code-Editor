@@ -1,5 +1,5 @@
 from flask import Flask, request, send_from_directory, jsonify
-from flask_cors import CORS
+from flask_cors import CORS, cross_origin
 import io
 import sys
 
@@ -7,10 +7,12 @@ app = Flask(__name__, static_folder='react app/dist', static_url_path='/')
 CORS(app)
 
 @app.route('/')
+@cross_origin()
 def index():
     return app.send_static_file("index.html")
 
 @app.route('/api/save_code', methods=['POST'])
+@cross_origin()
 def save_code():
     data = request.get_json()
     code = data.get('code')
